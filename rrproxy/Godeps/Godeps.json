@@ -1,0 +1,29 @@
+{
+	"ImportPath": "github.com/kung-foo/dod-workshop/rrproxy",
+	"GoVersion": "go1.5.1",
+	"Deps": [
+		{
+			"ImportPath": "github.com/BurntSushi/toml",
+			"Comment": "v0.1.0-21-g056c9bc",
+			"Rev": "056c9bc7be7190eaa7715723883caffa5f8fa3e4"
+		},
+		{
+			"ImportPath": "github.com/Sirupsen/logrus",
+			"Comment": "v0.7.3-4-gaaf92c9",
+			"Rev": "aaf92c95712104318fc35409745f1533aa5ff327"
+		},
+		{
+			"ImportPath": "github.com/docopt/docopt-go",
+			"Comment": "0.6.1-5-g854c423",
+			"Rev": "854c423c810880e30b9fecdabb12d54f4a92f9bb"
+		},
+		{
+			"ImportPath": "github.com/mediocregopher/radix.v2/pool",
+			"Rev": "bd4003cef27de41da21fb112ee717d1711c5624b"
+		},
+		{
+			"ImportPath": "github.com/mediocregopher/radix.v2/redis",
+			"Rev": "bd4003cef27de41da21fb112ee717d1711c5624b"
+		}
+	]
+}
