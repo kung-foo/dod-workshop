@@ -11,6 +11,7 @@ hash ab > /dev/null 2>&1 \
     || echo "Please install ApacheBench;\nUbuntu: apt-get install apache2-utils"
 
 echo "Pulling some common bases..."
+docker pull smebberson/alpine-redis
 docker pull smebberson/alpine-consul
 docker pull smebberson/alpine-consul-redis
 docker pull smebberson/alpine-consul-ui
