@@ -1,0 +1,7 @@
+# github@jonathan.camp
+redis:
+  image: smebberson/alpine-redis
+web:
+  build: webapp
+  links:
+   - redis

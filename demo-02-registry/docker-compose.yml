@@ -1,0 +1,23 @@
+# github@jonathan.camp
+redis:
+  image: smebberson/alpine-redis
+  ports:
+    - "6379"
+web:
+  build: ../demo-01-basics/webapp
+  links:
+   - redis
+  ports:
+    - "5000"
+consul:
+  hostname: consul
+  build: consul
+  ports:
+    - "8500:8500"
+registrator:
+  hostname: registrator
+  build: registrator
+  links:
+    - consul
+  volumes:
+    - "/var/run/docker.sock:/tmp/docker.sock"

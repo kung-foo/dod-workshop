@@ -1,0 +1,4 @@
+#!/usr/bin/with-contenv sh
+
+# start up the proxy
+exec /usr/local/bin/rrproxy --config /root/config.toml

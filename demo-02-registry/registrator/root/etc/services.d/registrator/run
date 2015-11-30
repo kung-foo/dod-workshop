@@ -1,0 +1,12 @@
+#!/usr/bin/with-contenv sh
+
+set -e
+
+# wait until consult HTTP api is online
+waitforit-linux-amd64 http://consul:8500/v1/status/leader
+
+# sigh, consul is online but the KV store will still return a 500...
+sleep 5
+
+# we could also use "consul://" rather than the KV store
+exec registrator consulkv://consul:8500/registry

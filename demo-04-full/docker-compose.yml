@@ -1,0 +1,28 @@
+consul:
+    hostname: consul
+    image: smebberson/alpine-consul
+redis:
+  image: smebberson/alpine-consul-redis
+  hostname: redis-master
+  links:
+    - consul:consul-agent
+proxy:
+  build: proxy
+  hostname: proxy
+  ports:
+    - "8888:8888"
+  links:
+   - redis
+   - consul:consul-agent
+slave:
+  build: slave
+  links:
+    - redis
+    - consul:consul-agent
+consul-ui:
+    image: smebberson/alpine-consul-ui
+    hostname: consul-ui
+    ports:
+      - "8500:8500"
+    links:
+      - consul:consul-agent

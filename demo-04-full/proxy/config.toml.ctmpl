@@ -1,0 +1,4 @@
+Master = "redis-master"
+Slaves = [
+    {{ range service "redis" }}{{ if .Tags | contains "slave" }}"{{ .Address }}",{{ end }}{{ end }}
+]

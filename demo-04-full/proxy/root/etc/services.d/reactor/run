@@ -1,0 +1,5 @@
+#!/usr/bin/with-contenv sh
+
+exec consul-template \
+    -consul localhost:8500 \
+    -template "/root/config.toml.ctmpl:/root/config.toml:s6-svc -t /var/run/s6/services/rrproxy"

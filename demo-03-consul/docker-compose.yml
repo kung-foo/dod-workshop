@@ -1,0 +1,14 @@
+consul:
+    hostname: consul
+    image: smebberson/alpine-consul
+redis:
+    image: smebberson/alpine-consul-redis
+    links:
+        - consul:consul-agent
+consul-ui:
+    image: smebberson/alpine-consul-ui
+    hostname: consul-ui
+    ports:
+        - "8500:8500"
+    links:
+        - consul:consul-agent

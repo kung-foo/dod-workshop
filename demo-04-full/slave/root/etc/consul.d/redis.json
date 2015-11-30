@@ -1,0 +1,13 @@
+{
+    "service": {
+        "name": "redis",
+        "tags": ["slave"],
+        "port": 6379,
+        "checks": [
+            {
+                "script": "redis-check",
+                "interval": "5s"
+            }
+        ]
+    }
+}
