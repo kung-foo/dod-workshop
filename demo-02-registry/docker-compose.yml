@@ -20,4 +20,4 @@ registrator:
   links:
     - consul
   volumes:
-    - "/var/run/docker.sock:/tmp/docker.sock"
+    - "/var/run/docker.sock:/tmp/docker.sock:ro"
