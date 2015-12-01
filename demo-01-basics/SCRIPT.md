@@ -29,7 +29,7 @@ New In 1.9
 172.18.0.3	demo01basics_redis_1
 172.18.0.3	demo01basics_redis_1.demo01basics
   ```
-4. Open a new terminal. `docker-compose --x-networking scale redis=2`
+4. Open a new terminal. `docker-compose --x-networking scale web=2`
 5. Access `http://$APP/hosts` and see an updated list of hostnames. For example:
   ```
 172.18.0.2	web

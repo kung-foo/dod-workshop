@@ -2,13 +2,13 @@
 redis:
   image: smebberson/alpine-redis
   ports:
-    - "6379"
+    - "6379" # port must be exposed for registrator to handle it
 web:
   build: ../demo-01-basics/webapp
   links:
    - redis
   ports:
-    - "5000"
+    - "5000" # port must be exposed for registrator to handle it
 consul:
   hostname: consul
   build: consul
