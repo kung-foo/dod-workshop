@@ -17,13 +17,13 @@ Consul Health
 3. Stop redis: `kill -s STOP $PID`
 4. Go back to the Consul UI
 5. List processes and look for a health check:
-  ```
-116 redis      0:01 redis-server /etc/redis.conf
-528 root       0:00 sh
-613 consul     0:00 /bin/sh -c redis-check
-614 consul     0:00 sh /usr/bin/redis-check
-615 consul     0:00 redis-cli ping
-  ```
+
+        116 redis      0:01 redis-server /etc/redis.conf
+        528 root       0:00 sh
+        613 consul     0:00 /bin/sh -c redis-check
+        614 consul     0:00 sh /usr/bin/redis-check
+        615 consul     0:00 redis-cli ping
+
 6. Start redis: `kill -s CONT $PID`
 7. Verify in the UI and process list that the service is now healthly.
 
